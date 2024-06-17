@@ -1,0 +1,450 @@
+@import url(https://use.fontawesome.com/releases/v6.5.1/css/all.css);
+/*PARA VER TODOS LOS ICONOS GRATIS: https://fontawesome.com/search?q=graph&o=r&m=free&s=solid&f=classic*/
+:root{
+    --bg: #ffffff;
+    --clr: #fff;
+}
+
+/* Estilos para el menú */
+#MenuG {
+    position: fixed;  /* Mantiene el menú fijo mientras se desplaza */
+    top: 1;           /* Alinea la parte superior del menú con la parte superior de la ventana */
+    right: 0;         /* Posiciona el menú en el borde derecho */
+    width: 23%; /* Ancho */
+    height: 60px; /* Alto */    
+    background-color: white; /* Color de fondo del menú */
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1); /* Añade una sombra para un efecto de profundidad */
+    z-index: 1000;    /* Asegura que el menú esté por encima de otros elementos */
+}
+
+
+ul{
+    position:relative;
+    display: flex;
+    gap: 50px;
+}
+
+li{
+    position: relative;
+    list-style: none;
+    width: 25px; /* Tamaño */
+    height: 25px; /* Tamaño */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+li::before{
+    content: '';
+    position: absolute;
+    inset: 12px; /* Tamaño */
+    box-shadow: 
+     0 0 0 10px var(--clr),
+     0 0 0 20px var(--bg),
+     0 0 0 22px var(--bg);
+    transition: 0.5s;
+}
+
+li::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--bg);
+    transform: rotate(45deg);
+    transition: 0.5s;
+}
+
+li:hover::before{
+    inset: 15px;
+}
+
+li:hover::after{
+    inset: 0px;
+    transform: rotate(0deg);
+}
+
+li:hover a i{
+    color: var(--clr);
+    transform: translateY(40%);
+}
+
+a{
+    position: relative;
+    z-index: 10;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a i{
+    opacity: 1;
+    color: var(--clr);
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+a span{
+    position: absolute;
+    color: var(--clr);
+    font-family: sans-serif;
+    transition: 0.5s;
+    transform: scale(2) translateY(200%);
+    opacity: 0;
+}
+
+ul li:hover a span{
+    opacity: 1;
+    transform: scale(1) translateY(-100%);
+}
+
+li:hover a i,
+li a span{
+    filter:
+        drop-shadow(0 0 20px var(--clr))
+        drop-shadow(0 0 40px var(--clr))
+        drop-shadow(0 0 60px var(--clr));
+}
+
+span {
+    font-size: 10px;
+}
+
+
+ /* Centrar todo del menu */
+.s-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ganttM {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.ganttM ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+.g-container {
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px;
+    margin: 10px;
+    float: left;
+    box-sizing: border-box; /* para incluir el padding y el border en el ancho */
+    display: flex; /* Alinear elementos en fila */
+    align-items: center; /* Centrar verticalmente los elementos */
+}
+.s-container {
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px;
+    margin: 10px;
+    float: left;
+    box-sizing: border-box; /* para incluir el padding y el border en el ancho */
+    display: flex; /* Alinear elementos en fila */
+    align-items: center; /* Centrar verticalmente los elementos */
+}
+
+
+#Titulo {
+    width: 80%; /* Ancho */
+    height: 60px; /* Alto */
+    
+}
+
+#Titulo h1{
+    margin: 0;
+}
+
+/* PARA EL APARTADO DE PANEL O KANBA */
+.tasks-container {
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px;
+    margin: 0px;
+    float: left;
+    box-sizing: border-box; /* para incluir el padding y el border en el ancho */
+    overflow: hidden; /* Oculta la barra de desplazamiento inicialmente */
+}
+
+.tasks-container:hover {
+    overflow: auto; /* Muestra la barra de desplazamiento al pasar el cursor sobre el contenedor */
+}
+
+.tasks-container::-webkit-scrollbar {
+    width: 1px; /* Ancho de la barra de desplazamiento */
+}
+.tasks-container::-webkit-scrollbar {
+    height: 1px; /* Establece el ancho de la barra de desplazamiento en la parte inferior */
+}
+
+.tasks-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5); /* Color del botón de desplazamiento */
+    border-radius: 4px; /* Borde redondeado del botón de desplazamiento */
+}
+
+.tasks-container::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Cambia el color del botón de desplazamiento al pasar el cursor */
+}
+
+
+.custom-container {
+    width: 320px;
+    height: 85vh;
+}
+
+
+/* PARA EDITAR LAS SUBTAREAS EN EL PANEL */
+.sub-container {
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px;
+    margin: 10px;
+    float: left;
+    box-sizing: border-box; /* para incluir el padding y el border en el ancho */
+    
+}
+
+.Nombre {
+    text-align: center;
+}
+#Subtareas{
+    width: 98%; /* Ancho */
+    height: 100px; /* Alto */
+    font-size: 15px;
+    justify-content: center;
+    box-shadow: 0px 0px 10px  rgba(33, 60, 121, 0.8);
+    border-radius: 5px; 
+
+    /* display: flex; Utilizar flexbox 
+    justify-content: center; Centrar horizontalmente */
+}
+
+#Subir_arch {
+    width: 50%; /* Ancho */
+    height: 45px; /* Alto */
+    display: flex; /* Usar display flex para alinear */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    margin: 0; 
+    padding: 0; 
+    border-top: 1px solid rgb(182, 182, 182);
+    border-bottom: 1px solid rgb(182, 182, 182); /* Contorno en el lado inferior */
+    border-right: 1px solid rgb(182, 182, 182); /* Contorno en el lado derecho */
+}   
+
+#Estatus {
+    width: 50%; /* Ancho*/
+    height: 45px; /* Alto */
+    display: flex; /* Usar display flex para alinear */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    margin: 0; 
+    padding: 0; 
+    border-top: 1px solid rgb(182, 182, 182);
+    border-bottom: 1px solid rgb(182, 182, 182); /* Contorno en el lado inferior */
+    border-left: 1px solid rgb(182, 182, 182); /* Contorno en el lado izquierdo */
+}
+
+#Primer_fecha {
+    width: 20%; /* Ancho */
+    height: 20px; /* Alto */
+    display: flex; /* Usar display flex para alinear */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    margin: 0; 
+    padding: 0; 
+}
+#Segunda_fecha {
+    width: 20%; /* Ancho */
+    height: 20px; /* Alto */
+    display: flex; /* Usar display flex para alinear */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin padding */
+}
+#Primer_asignacion {
+    width: 60%; /* Ancho */
+    height: 20px; /* Alto */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 0; 
+    padding: 0;
+}
+
+/* PARA EL DEPOSITO DE TODAS LAS GRAFICAS */
+#charts-container{
+    border: 1px solid #ffffff;
+    padding: 5px; 
+    width: 120vh;
+    height: 40vh;
+    position: absolute; /* Posición absoluta para mover libremente */ 
+    top: 13.5vh; /* Posición desde arriba */
+    left: 2vh; /* Posición desde la izquierda */ 
+    overflow: auto; /* Barra de desplazamiento */
+    box-shadow: 0px 0px 10px  #7a7878cc;
+    border-radius: 5px; 
+    
+}
+
+
+/*GRAFICAS INDIVIDUALES POR TABLERO*/
+.completion-chart-container {
+    border: 1px solid rgb(255, 255, 255);
+    width: 225px; 
+    height: 230px; 
+    display: inline-block; /* Alinea las gráficas horizontalmente */
+    margin: 10;
+    box-shadow: 0px 0px 10px  rgba(33, 60, 121, 0.8);
+    border-radius: 5px; 
+}
+
+/*GRAFICA GLOBAL*/
+#global-chart-container {
+    border: 1px solid rgb(255, 255, 255);
+    width: 40vh; 
+    height: 40vh; 
+    position: absolute; /* Posición absoluta para mover libremente */ 
+    top: 13.5vh; /* Posición desde arriba */
+    left: 143vh; /* Posición desde la izquierda */
+    box-shadow: 0px 0px 10px  #7a7878cc;
+    border-radius: 5px; 
+}
+
+/* PARA EDITAR LA FUENTE DE LAS COLUMNAS DEL GANTT Y EL COLOR DE LA GRAFICA DE TIEMPO */
+/* Ajustar el tamaño de la fuente de las columnas */
+.gantt_grid_head_cell, .gantt_grid_data_cell, .gantt_task_content {
+    font-size: 10px !important;
+}
+
+.gantt_task_content, .gantt_task_cell, .gantt_grid_data, .gantt_grid_scale, .gantt_scale_line, .gantt_grid_scale_cell, .gantt_scale_cell, .gantt_side_content, .gantt_grid_data_cell, .gantt_task_row, .gantt_row {
+    font-size: 10px !important;
+}
+
+/* Colores personalizados para las tareas */
+.gantt_task_color_1 .gantt_task_content, .gantt_task_color_1 .gantt_task_line, .gantt_task_color_1 .gantt_task_row {
+    background-color: rgba(0, 4, 255, 0.1); /* Color azul con 10% de opacidad */
+    border: 1px solid rgba(0, 4, 255, 0.3); /* Borde azul con 30% de opacidad */
+}
+
+.gantt_task_color_2 .gantt_task_content, .gantt_task_color_2 .gantt_task_line, .gantt_task_color_2 .gantt_task_row {
+    background-color: rgba(10, 196, 10, 0.1); /* Color verde con 10% de opacidad */
+    border: 1px solid rgba(10, 196, 10, 0.3); /* Borde verde con 30% de opacidad */
+}
+
+.gantt_task_color_3 .gantt_task_content, .gantt_task_color_3 .gantt_task_line, .gantt_task_color_3 .gantt_task_row {
+    background-color: rgba(199, 18, 139, 0.1); /* Color rosa con 10% de opacidad */
+    border: 1px solid rgba(199, 18, 139, 0.3); /* Borde rosa con 30% de opacidad */
+}
+
+.gantt_task_color_4 .gantt_task_content, .gantt_task_color_4 .gantt_task_line, .gantt_task_color_4 .gantt_task_row {
+    background-color: rgba(98, 0, 143, 0.1); /* Color púrpura con 10% de opacidad */
+    border: 1px solid rgba(98, 0, 143, 0.3); /* Borde púrpura con 30% de opacidad */
+}
+
+.gantt_task_color_5 .gantt_task_content, .gantt_task_color_5 .gantt_task_line, .gantt_task_color_5 .gantt_task_row {
+    background-color: rgba(211, 9, 9, 0.1); /* Color rojo con 10% de opacidad */
+    border: 1px solid rgba(211, 9, 9, 0.3); /* Borde rojo con 30% de opacidad */
+}
+
+.highlight-red {
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+/*PARA EDITAR LA FUENTE DE LAS COLUMNAS DEL GANTT Y EL COLOR DE LA GRAFICA DE TIEMPO 
+ Ajustar el tamaño de la fuente de las columnas 
+.gantt_grid_head_cell, .gantt_grid_data_cell, .gantt_task_content {
+    font-size: 10px !important;
+}
+                    
+.gantt_task_content, .gantt_task_cell, .gantt_grid_data, .gantt_grid_scale, .gantt_scale_line, .gantt_grid_scale_cell, .gantt_scale_cell, .gantt_side_content, .gantt_grid_data_cell, .gantt_task_row, .gantt_row {
+    font-size: 10px !important;
+}
+                    
+ Colores personalizados para las tareas 
+.gantt_task_color_1 .gantt_task_content, .gantt_task_color_1 .gantt_task_line, .gantt_task_color_1 .gantt_task_row {
+    background-color: #0004ff;
+}
+                    
+.gantt_task_color_2 .gantt_task_content, .gantt_task_color_2 .gantt_task_line, .gantt_task_color_2 .gantt_task_row {
+    background-color: #0ac40a;
+}
+                    
+.gantt_task_color_3 .gantt_task_content, .gantt_task_color_3 .gantt_task_line, .gantt_task_color_3 .gantt_task_row {
+    background-color: #c7128b;
+}
+                    
+.gantt_task_color_4 .gantt_task_content, .gantt_task_color_4 .gantt_task_line, .gantt_task_color_4 .gantt_task_row {
+    background-color: #62008f;
+}
+                    
+.gantt_task_color_5 .gantt_task_content, .gantt_task_color_5 .gantt_task_line, .gantt_task_color_5 .gantt_task_row {
+    background-color: #d30909;
+}
+
+
+.highlight-red {
+    text-decoration: underline;
+    text-decoration-color: red;
+}*/
+
+
+/*PARA LA SEPARACION DE LAS COLUMNAS*/
+.gantt_grid_data .gantt_cell:nth-child(2),
+.gantt_grid_data .gantt_cell:nth-child(5),
+.gantt_grid_data .gantt_cell:nth-child(9),
+.gantt_grid_data .gantt_cell:nth-child(10) {
+    border-right: 2px solid #d3d0d0;
+}
+
+.gantt_grid_data .gantt_cell:nth-child(3),
+.gantt_grid_data .gantt_cell:nth-child(4),
+.gantt_grid_data .gantt_cell:nth-child(6),
+.gantt_grid_data .gantt_cell:nth-child(7),
+.gantt_grid_data .gantt_cell:nth-child(8) {
+    border-right: 2px solid #f3f2f2;
+}
+
+.client-name {
+    font-size: 1em; /*TAMAÑO*/
+}
+
+#gantt_chart {
+  width: 100vw;
+  height: calc(100vw * 0.4); /* Mantener una proporción de 2.25:1 */
+}
+
+/* PARA EL BOTON DE BLOQUEO */
+#toggleLockButton {
+    position: fixed;
+    top: 20px; /* Ajusta el valor para separar del borde superior */
+    right: 12px; /* Ajusta el valor para separar del borde derecho */
+    padding: 1px 2px;
+    border: none;
+    border-radius: 5px;
+    font-size: 10px;
+    cursor: pointer;
+    z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+}
+.red {
+    background-color: red;
+    color: white;
+}
+.green {
+    background-color: green;
+    color: white;
+}
+.white {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
