@@ -1,0 +1,583 @@
+﻿body {  /* FONDO Y PANTALLA COMPLETA */
+
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color:  #5f80cfcc;
+}
+
+.header {
+    background-color: #005CA3; 
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.logo {
+    color: #fff; 
+    font-size: 1.5em;
+}
+
+.greeting {
+    color: #fff; 
+    text-align: center;
+}
+
+.search-icon {
+    color: #fff; 
+    width: 100px;
+    margin-right: 5px;
+}
+
+input[type="text"] {
+    padding: 5px;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.main-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* ESTILOS ESPECIFICOS PARA LOS CONTENEDORES DE LA PANTALLA PRINCIPAL */
+
+/* PRIMER CONTENEDOR - ESTE ES PARA EL CONTENEDOR DEL MENU DE OPCIONES*/
+/* Estilo para el contenedor principal */
+.container1 {
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #f5f5f5, #e8e8e8);
+    border-radius: 10px;
+    flex: 1;
+}
+
+/* Estilo específico para el menú */
+#menu {
+    height: 86vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 0px 10px #201b1bb7;
+}
+
+/* Estilo para el título */
+.Titulo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Estilo para el elemento del menú */
+.menu-item {
+    font-weight: bold;
+    font-size: 15px;
+    color: #4f4747;
+    background-color: #f5f5f5, #e8e8e8;
+    width: 80%;
+    height: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Estilo para el hover en el elemento del menú */
+.menu-item:hover {
+    background-color: #6aa4e2;
+    transform: translateY(-5px);
+}
+
+
+/* SEGUNDO CONTENEDOR - CONTENDOR DE LA VISUALIZACION DEL PROYECTO PADRE */
+
+
+.container {
+    background: linear-gradient(135deg, #f5f5f5, #e8e8e8); /* Fondo degradado */
+    padding: 10px;
+    margin: 10px;
+    float: left;
+    box-sizing: border-box; /* para incluir el padding y el border en el ancho */    
+}
+
+#elementos {
+    width: 60vh; /* Ancho */
+    height: 86vh;; /* Alto */
+    box-shadow: 0px 0px 10px #e72b2bb7;
+    border-radius: 5px; 
+}
+
+
+
+#GraficaP{
+    width: 94%; /* Ancho */
+    height: 300px; /* Alto */
+}
+
+#Ava1{
+    width: 27%; /* Ancho */
+    height: 50px; /* Alto */
+    font-size: 10px;
+}
+
+#Ava2{
+    width: 29%; /* Ancho */
+    height: 50px; /* Alto */
+    font-size: 10px;
+}
+
+#Atra{
+    width: 25%; /* Ancho */
+    height: 50px; /* Alto */
+    font-size: 10px;
+}
+
+
+/*DEL TERCER CONTENEDOR - DONDE IRAN AGREGANDOSE LOS PROYECTOS DINAMICAMENTE*/
+.project-container {
+    border: 1px solid rgb(253, 253, 253);
+    padding: 10px;
+    padding-top: 45px;
+    margin: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px #1ddd03;
+    border-radius: 5px;
+    background: #ffffff;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 400px;
+    flex: 4;
+}
+
+
+.project-container:hover {
+    overflow: auto; /* Muestra la barra de desplazamiento al pasar el cursor sobre el contenedor */
+}
+.project-container::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de desplazamiento */
+}
+.project-container::-webkit-scrollbar {
+    height: 10px; /* Establece el ancho de la barra de desplazamiento en la parte inferior */
+}
+.project-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5); /* Color del botón de desplazamiento */
+    border-radius: 4px; /* Borde redondeado del botón de desplazamiento */
+}
+
+.project-container::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Cambia el color del botón de desplazamiento al pasar el cursor */
+}
+
+
+#projectsContainer {
+    width: 110vh; /* Ancho */
+    height: 86vh;; /* Alto */
+}
+
+.Des{
+    font-size: 20px; /* Tamaño de fuente grande */
+    font-weight: bold; /* Fuente en negrita */
+    color: #333; /* Color de texto oscuro */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    background:  #ffffff;
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center;
+    position: absolute; /* Mover libremente */ 
+    top: 13.5vh; /* Arriba */
+    left: 124vh; /* Izquierda */
+}
+
+
+
+/* CONTENEDOR INDIVIDUAL, DE CADA PROYECTO */
+.project-wrapper{
+    border: 1px solid rgba(4, 101, 180, 0);
+    padding: 10px;
+    margin: 10px;
+    float: left;
+    box-sizing: border-box;
+    width: 29vh; /* Ancho */
+    height: 230px; /* Altura  */
+    text-align: center;
+    box-shadow: 0px 0px 10px #0736a3cc;
+    border-radius: 5px; 
+
+}
+
+/* CONTENEDOR DEL BOTON - NOMBRE DEL PROYECTO */
+.project-item {
+    border: 1px solid 135deg, #f5f5f5, #e8e8e8;
+    padding: 0px;
+    margin: 0px;
+    float: left;
+    box-sizing: border-box;
+    width: 100%; /* Ancho */
+    height: 25px; /* Altura */
+    overflow: auto; /* Para desplazamiento */
+    text-align: center;
+}
+
+
+/* Si deseas ajustar automáticamente el tamaño de la fuente - Nombre del proyecto - boton*/
+.project-button {
+    width: 100px; /* Ajusta el ancho del botón a 200px */
+    height: 20px; /* Ajusta la altura del botón a 50px */
+
+    overflow: hidden; /* Ocultar cualquier texto que se salga del borde del botón */
+}
+/* Del fondo del boton del nombre del proyecto */
+.project-item:hover {
+    background-color: #a7b7ec; /* Fondo azul oscuro en hover */
+    transform: translateY(-5px); /* Desplazamiento hacia arriba en hover */
+}
+/* Contenedor donde ira la grafica de avance */
+.grafica-item{
+    border: 1px solid rgb(22, 25, 224);
+    padding: 0px;
+    margin: 0px;
+    float: left;
+    box-sizing: border-box;
+    width: 100%; /* Ancho */
+    height: 165px; /* Altura */
+    overflow: auto; /* Para el desplazamiento */
+    text-align: center;
+}
+/* Contenedor del boton de informacion */
+.info-item{
+    border: 1px solid 135deg, #f5f5f5, #e8e8e8;
+    padding: 2px;
+    margin: 0px;
+    float: left;
+    box-sizing: border-box;
+    width: 100%; /* Ancho */
+    height: 25px; /* Altura */
+    /* overflow: auto; Para desplazamiento */
+    text-align: center;
+}
+
+/* TERMINA EL 3ER CONTENEDOR  */
+
+.basura-item{
+    border: 1px solid black;
+    padding: 0px;
+    margin: 0px;
+    float: left;
+    box-sizing: border-box;
+    width: 100%; /* Ancho */
+    height: 25px; /* Altura */
+    overflow: auto; /* Para desplazamiento */
+    text-align: center;
+}
+
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #add8e6;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.menu-item {
+    padding: 30px;
+    cursor: pointer;
+}
+
+
+/* PARA EDITAR EL FORMULARIO */
+.project-creation-form {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(71, 30, 221, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Valor mayor que el z-index del menú desplegable */
+    font-family: Arial, sans-serif;
+}
+
+.form-header {
+    position: relative;
+}
+
+.form-field {
+    margin-bottom: 15px;
+}
+
+.form-field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+
+/* Excluir campos de entrada con id "idItem" */
+.form-field input[type="text"],
+.form-field input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.form-buttons {
+    margin-top: 10px; /* Añade espacio entre los campos y los botones */
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Centra los botones horizontalmente */
+    align-items: center;
+}
+
+
+.form-buttons button {
+    background-color: #8ab6e6;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+/* Fondo del formulario */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+
+}
+
+.form-field select {
+    width: 100%;
+}
+
+
+/* Para la segunda parte de formulario, el que se despliega dependiendo el numero de tableros */
+.form-field.horizontal {
+    display: flex;
+    align-items: center;
+}
+
+.form-field.horizontal label {
+    flex: 0 0 150px;
+}
+
+.form-field.horizontal input,
+.form-field.horizontal select {
+    flex: 1;
+}
+
+.form-field {
+text-align: center; /* Centrar los botones horizontalmente */
+}
+
+.form-field.horizontal label {
+flex: 0 0 auto; /* Restablecer la propiedad flex */
+margin-left: 0px; /* Ajustar el margen izquierdo para mover el texto hacia la izquierda */
+}
+
+/*Para el boton de cierra el forms */
+.form-buttons .close-btn {
+    font-size: 1.5em;
+    color: #2200e2;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-size: 28px;
+}
+
+.close-btn {
+    cursor: pointer;
+    font-size: 1.2em;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    margin: 5px;
+}
+
+.close-btn {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close-btn:hover,
+  .close-btn:focus {
+    color: rgb(253, 2, 2);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+form {
+    position: relative;
+}
+
+.close-btn {
+    cursor: pointer;
+}
+/*SE TERMINA DE EDITAR TODO LO DEL FORMS */
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Añade espacio debajo del contenedor de búsqueda */
+}
+
+input[type="text"] {
+    padding: 5px;
+    margin-right: 10px; /* Añade espacio a la derecha del campo de búsqueda */
+}
+
+.project-icon {
+    width: 2cm;
+    height: 2cm;
+    border: 1px solid #000;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+#elementos {
+    text-align: center; /* Alinear el contenido del contenedor al centro */
+}
+
+.s {
+    padding: 10px;
+    background-color: #db2c2c;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+:root{
+    --color_facebook: #3b5998;
+    --color_twitter: #00acce;
+    --color_instagram: #e95950;
+    --color_pinterest: #c8232c;
+    --background-color: rgb(15,17,27)
+}
+
+.grafico{
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background-image: conic-gradient(var(--color_facebook) 40%,
+                                    var(--color_twitter) 40% 70%,
+                                    var(--color_instagram) 70% 88%,
+                                    var(--color_pinterest) 88%);
+    box-shadow: 1px 1px 5px 1px rgb(70, 70, 70);
+    margin: auto; /* Centra horizontalmente */
+}
+
+
+.itemContainer{
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+    margin: 10px;
+    float: left;
+    box-sizing: border-box; /* para incluir el padding y el border en el ancho */
+}
+
+
+
+/* PARA EL MUESTREO DE LA INFORMACION DEL PROYECTO - MODAL */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: #4780fc66;
+  }
+  
+/* MODAL - CONTENIDO DE LA CAJA*/
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+  
+  /* PARA EL BOTON DE CERRAR EL MODAL - INFORMACION */
+  .close {
+    color: #3b5998;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: rgb(2, 2, 2);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+/* Estilo para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.highlight-red {
+    text-decoration: underline;
+    text-decoration-color: red;
+}
